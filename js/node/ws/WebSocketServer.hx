@@ -1,6 +1,7 @@
 package js.node.ws;
 import js.node.events.EventEmitter;
 import js.Error;
+import js.node.http.Server;
 
 
 

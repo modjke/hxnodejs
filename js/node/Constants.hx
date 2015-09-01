@@ -19,32 +19,21 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-package js.node.zlib;
+package js.node;
 
-/**
-	Not exported by the zlib module.
-	It is documented here because it is the base class of the compressor/decompressor classes.
-**/
-extern class Zlib extends js.node.stream.Transform<Zlib> {
-	/**
-		Flush pending data.
-
-		`kind` defaults to `Zlib.Z_FULL_FLUSH`.
-
-		Don't call this frivolously, premature flushes negatively impact the effectiveness of the compression algorithm.
-	**/
-	@:overload(function(kind:Int, callback:Void->Void):Void {})
-	function flush(callback:Void->Void):Void;
-
-	/**
-		Dynamically update the compression level and compression strategy.
-		Only applicable to deflate algorithm.
-	**/
-	function params(level:Int, strategy:Int, callback:Void->Void):Void;
-
-	/**
-		Reset the compressor/decompressor to factory defaults.
-		Only applicable to the inflate and deflate algorithms.
-	**/
-	function reset():Void;
+@:jsRequire("constants")
+extern class Constants {
+	static var ENGINE_METHOD_RSA(default,null):Int;
+	static var ENGINE_METHOD_DSA(default,null):Int;
+	static var ENGINE_METHOD_DH(default,null):Int;
+	static var ENGINE_METHOD_RAND(default,null):Int;
+	static var ENGINE_METHOD_ECDH(default,null):Int;
+	static var ENGINE_METHOD_ECDSA(default,null):Int;
+	static var ENGINE_METHOD_CIPHERS(default,null):Int;
+	static var ENGINE_METHOD_DIGESTS(default,null):Int;
+	static var ENGINE_METHOD_STORE(default,null):Int;
+	static var ENGINE_METHOD_PKEY_METH(default,null):Int;
+	static var ENGINE_METHOD_PKEY_ASN1_METH(default,null):Int;
+	static var ENGINE_METHOD_ALL(default,null):Int;
+	static var ENGINE_METHOD_NONE(default,null):Int;
 }

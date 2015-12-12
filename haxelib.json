@@ -3,8 +3,9 @@
     "url": "https://github.com/HaxeFoundation/hxnodejs",
     "description": "Extern definitions for node.js",
     "license": "MIT",
-    "version": "0.12.0",
-    "releasenote": "Initial release for node.js 0.12",
+    "version": "4.0.1",
+    "releasenote": "sys.FileSystem.createDirectory is now recursive",
+    "classPath": "src",
     "contributors": ["nadako"],
     "tags": ["js", "nodejs", "async", "net", "web"]
 }
